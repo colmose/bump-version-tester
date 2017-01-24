@@ -4,7 +4,10 @@
   "description": "\"# bump-version-tester\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "npm test",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

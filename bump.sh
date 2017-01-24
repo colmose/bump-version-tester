@@ -33,7 +33,8 @@ if [ -f VERSION ]; then
     mv tmpfile CHANGES
     git add CHANGES VERSION
     git commit -m "Adding updated CHANGES AND VERSION"
-    npm version ${INPUT_STRING}
+    git push -u origin $(git rev-parse --abbrev-ref HEAD)
+    npm version ${INPUT_STRING} -m "Update to %s"
 else
     echo "Could not find a VERSION file"
     read -p "Do you want to create a version file and start from scratch? [y]" RESPONSE

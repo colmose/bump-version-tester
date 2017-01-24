@@ -1,6 +1,6 @@
 {
   "name": "bump_v_test",
-  "version": "1.6.0",
+  "version": "1.13.0",
   "description": "\"# bump-version-tester\"",
   "main": "index.js",
   "scripts": {

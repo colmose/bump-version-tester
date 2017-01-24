@@ -1,0 +1,19 @@
+{
+  "name": "bump_v_test",
+  "version": "1.0.0",
+  "description": "\"# bump-version-tester\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colmose/bump-version-tester.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colmose/bump-version-tester/issues"
+  },
+  "homepage": "https://github.com/colmose/bump-version-tester#readme"
+}

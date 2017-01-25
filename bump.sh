@@ -44,13 +44,16 @@ else
     if [ "$RESPONSE" = "yes" ]; then RESPONSE="y"; fi
     if [ "$RESPONSE" = "YES" ]; then RESPONSE="y"; fi
     if [ "$RESPONSE" = "y" ]; then
-        echo "1.1.0" > VERSION
-        echo "Version 1.1.0" > CHANGES
+        read -p "Enter a version number: " INPUT_STRING
+        echo "Will set new version to be $INPUT_STRING"
+        echo ${INPUT_STRING} > VERSION
+        echo ${INPUT_STRING} > CHANGES
         git log --pretty=format:" - %s" >> CHANGES
         echo "" >> CHANGES
         echo "" >> CHANGES
         git add VERSION CHANGES
         git commit -m "Added VERSION and CHANGES files, Version bump to v1.1.0"
-        npm version 1.1.0
+        git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+        npm version ${INPUT_STRING}
     fi
 fi
